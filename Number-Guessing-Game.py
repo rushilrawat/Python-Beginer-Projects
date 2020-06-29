@@ -1,10 +1,10 @@
 #Number Guessing Game
-
-Secret_Number = int(input("Please give a secret number:"))
+from getpass import getpass
+Secret_Number = int(getpass("Please give a secret number:"))
 Guess_Limit = int(input("Please give guess limit (ie. How many chances) :"))
 Guess_Count = 0
 
-print(F"Hint : The Secert Number is between {Secret_Number - 50} to {Secret_Number + 50}")
+print(F"Hint : The Secert Number is any number between {Secret_Number - 60} to {Secret_Number + 60}")
 
 while Guess_Count != Guess_Limit:
     Guess=int(input("Guess a number:"))
@@ -12,5 +12,7 @@ while Guess_Count != Guess_Limit:
     if Guess != Secret_Number:
         print("Try Again!")
     elif Guess== Secret_Number:
-        print("You wont the game!")
+        print(f"Your Guess was right, The secret Number was {Secret_Number}. You wont the game!")
         break
+else:
+    print(f"Sorry! None of your guesses were right, The secret Number was {Secret_Number}. You failed!")
