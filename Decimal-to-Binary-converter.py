@@ -5,7 +5,7 @@ def convertToBinary(n):
    print(n % 2,end = '')
 
 # decimal number
-dec = 34
+dec = int(input("Enter the decimal number: "))
 
 convertToBinary(dec)
-print()
+print(f''' is the binary of {dec}''')
