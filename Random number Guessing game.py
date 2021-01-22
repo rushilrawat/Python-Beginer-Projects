@@ -1,3 +1,4 @@
+#Advanced Number Guessing game made in Python
 #define the functions
 import random
 def guess_num():
